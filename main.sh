@@ -6,6 +6,7 @@ source ./dns.sh
 source ./dhcp.sh
 source ./ssh.sh
 source ./ftp.sh
+source ./http.sh
 
 # Menú interactivo
 while true; do
@@ -16,6 +17,7 @@ while true; do
     echo "4) Configurar servidor DHCP"
     echo "5) Configrar servidor SSH"
     echo "6) Configrar servidor FTP"
+    echo "7) Configrar HTTP"
     read -rp "Opción: " opcion
 
     case $opcion in
@@ -37,6 +39,9 @@ while true; do
             ;;
         6)
             menu_ftp
+            ;;
+        7)
+            menu_http
             ;;
         *)
             PrintMessage "Opción no válida. Saliendo..." "error"
